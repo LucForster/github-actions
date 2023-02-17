@@ -60,5 +60,5 @@
 		1. Die Doku in den Unterordner `docu` kopiert
 		1. Die Testergebnisse in den Ordner `tests` kopiert
 		1. Das erstellte Bundle in den Ordner `download` kopiert
-	1. Die Änderungen ins Repository pushed
+	1. Die Änderungen ins Repository pushed  
 
