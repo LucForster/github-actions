@@ -174,3 +174,26 @@ jobs:
            name: bundle
            path: ./download
 
+       - name: Update Github Pages
+         run: |
+           rm -rdf ./gh-pages/docu
+           rm -rdf ./gh-pages/tests
+           rm -rdf ./gh-pages/download
+           
+           cp -r ./tests ./gh-pages
+           cp -r ./docu ./gh-pages
+           cp -r ./download ./gh-pages
+           
+       - name: Update Repo
+         run: |
+           git config --global user.name 'GH-Pages pusher'
+           git config --global user.email "gh-pusher@local"
+           git add -A 
+           git commit -m 'Add test results for ${{ github.sha }}'
+           git push
+            
+         working-directory: ./gh-pages
+          
+        
+        
+       
